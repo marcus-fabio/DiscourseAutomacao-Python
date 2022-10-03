@@ -53,7 +53,7 @@ class DemoPage:
         return [topic.text for topic in self.driver.find_elements(*DemoPageElements.topicLink)]
 
     # Convert number of views string to int
-    def convertInt(self, str):
+    def convertInt(str):
         if str:
             if 'k' in str:
                 return int(float(str.replace('k',''))*1000)
@@ -64,4 +64,4 @@ class DemoPage:
 
     # Get list of number of views in demo page
     def getTopicsViewsList(self):
-        return [self.convertInt(views.text) for views in self.driver.find_elements(*DemoPageElements.topicView)]
+        return [DemoPage.convertInt(views.text) for views in self.driver.find_elements(*DemoPageElements.topicView)]
