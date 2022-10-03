@@ -1,7 +1,6 @@
 import time
 from selenium.webdriver.common.keys import Keys
-from locators import HomePageElements
-from locators import DemoPageElements
+from locators import *
 
 # Class of home page
 class HomePage:
