@@ -1,5 +1,5 @@
 import unittest
-import discourse
+from discourse import HomePage
 from selenium import webdriver
 
 class DiscourseTest(unittest.TestCase):
@@ -10,7 +10,7 @@ class DiscourseTest(unittest.TestCase):
     
     def test1_closed_topics(self):
         # Access home page
-        homePage = discourse.HomePage(self.driver)
+        homePage = HomePage(self.driver)
 
         #Access demo page
         demoPage = homePage.clickDemoLink()
@@ -36,7 +36,7 @@ class DiscourseTest(unittest.TestCase):
 
     def test2_categories_list(self):
         # Access home page
-        homePage = discourse.HomePage(self.driver)
+        homePage = HomePage(self.driver)
 
         #Access demo page
         demoPage = homePage.clickDemoLink()
@@ -63,7 +63,7 @@ class DiscourseTest(unittest.TestCase):
 
     def test3_most_viewed_topic(self):
          # Access home page
-        homePage = discourse.HomePage(self.driver)
+        homePage = HomePage(self.driver)
 
         #Access demo page
         demoPage = homePage.clickDemoLink()
