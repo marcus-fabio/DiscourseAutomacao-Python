@@ -1,3 +1,6 @@
+__author__ = "Marcus Fabio"
+
+
 import unittest
 from discourse import HomePage
 from selenium import webdriver
