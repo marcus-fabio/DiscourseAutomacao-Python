@@ -1,6 +1,4 @@
-"""
-Created by Marcus Silva
-"""
+__author__ = "Marcus Fabio Santos da Silva"
 
 
 import unittest
