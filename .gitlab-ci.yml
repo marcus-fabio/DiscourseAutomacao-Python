@@ -28,9 +28,14 @@ stages:          # List of stages for jobs, and their order of execution
 #    - echo "Compile complete."
 
 unittest-test-job:   # This job runs in the test stage.
+  image: python
   stage: test    # It only starts when the job in the build stage completes successfully.
+  before_script:
+    - pip install selenium
   script:
     - python -m unittest Automacao1.py
+  services:
+    - selenium/standalone-chrome
 
 #lint-test-job:   # This job also runs in the test stage.
 #  stage: test    # It can run at the same time as unit-test-job (in parallel).
